@@ -366,11 +366,11 @@ header .header__nav .daburger .topbun {
 	}
 }
 
-main {
+.homepage__main {
 	grid-area: main;
 	font-family: "Jost", sans-serif;
 }
-main .main_content-cont {
+.homepage__main .main_content-cont {
 	display: grid;
 	justify-content: space-between;
 	text-align: center;
@@ -380,19 +380,19 @@ main .main_content-cont {
 	grid-template-columns: repeat(4, 1fr);
 	grid-template-rows: repeat(4, 1fr);
 }
-main .main_content-cont aside {
+.homepage__main .main_content-cont aside {
 	grid-column: 1/5;
 }
-main .main_content-cont h3 {
+.homepage__main .main_content-cont h3 {
 	letter-spacing: 0.35em;
 	font-size: 1.3rem;
 	text-transform: uppercase;
 }
 @media screen and (min-width: 1020px) {
-	main .main_content-cont {
+	.homepage__main .main_content-cont {
 		grid-template-columns: repeat(3, 1fr);
 	}
-	main .main_content-cont aside {
+	.homepage__main .main_content-cont aside {
 		grid-row: 1/4;
 		grid-column: auto;
 	}
@@ -533,6 +533,76 @@ footer .footer_links {
 		grid-area: 4/4/5/6;
 		font-size: 2rem;
 		justify-content: space-evenly;
+	}
+}
+
+.wd__page .main__header {
+	background-color: #d30000;
+	display: flex;
+	flex-direction: column;
+	padding: 10%;
+	border-radius: 20px;
+	color: #ffffff;
+	gap: 1em;
+	text-align: center;
+	font-family: "Jost", sans-serif;
+}
+.wd__page .main__header h2 {
+	text-transform: capitalize;
+	font-size: 2rem;
+	font-weight: 400;
+}
+.wd__page .main__header p {
+	font-size: 0.8em;
+	font-weight: 300;
+}
+.wd__page .fig__group ul {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	grid-template-rows: repeat(3, 1fr);
+	grid-auto-flow: column;
+	gap: 1em;
+	padding-bottom: 250px;
+	padding-top: 50px;
+}
+.wd__page .fig__group ul img {
+	width: 186px;
+}
+.wd__page .fig__group ul a {
+	color: #333136;
+	text-decoration: none;
+}
+.wd__page .fig__group ul .info {
+	background-color: #FDF0F0;
+	padding: 10%;
+	text-align: center;
+	border-bottom-right-radius: 10px;
+	border-bottom-left-radius: 10px;
+}
+.wd__page .fig__group ul .info h4 {
+	font-size: 1em;
+	text-transform: capitalize;
+	color: #9d0000;
+	font-weight: 400;
+}
+.wd__page .fig__group ul .info p {
+	font-size: 0.8em;
+	font-weight: 300;
+}
+@media screen and (min-width: 1020px) {
+	.wd__page .fig__group ul {
+		grid-template-rows: repeat(2, 1fr);
+		grid-template-columns: repeat(3, 1fr);
+		grid-auto-flow: row;
+	}
+	.wd__page .fig__group ul img {
+		width: 497px;
+	}
+	.wd__page .fig__group ul .info h4 {
+		font-size: 1.3em;
+	}
+	.wd__page .fig__group ul .info p {
+		font-size: 1em;
 	}
 }
 /*# sourceMappingURL=main.css.map */

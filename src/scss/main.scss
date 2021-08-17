@@ -251,7 +251,7 @@ header{
 	}
 }
 
-main {
+.homepage__main {
 	grid-area: main;
 	font-family: $BodyFont;
 	
@@ -435,6 +435,94 @@ footer{
 			grid-area: 4 / 4 / 5 / 6;
 			font-size: 2rem;
 			justify-content: space-evenly;
+		}
+	}
+}
+
+//Web Design Page
+
+.wd__page{
+
+	.main__header{
+		background-color: $secondary-color2;
+		display: flex;
+		flex-direction: column;
+		padding: 10%;
+		border-radius: 20px;
+		color: $primary-color;
+		gap: 1em;
+		text-align: center;
+		font-family: $BodyFont;
+
+		h2{
+			text-transform: capitalize;
+			font-size: 2rem;
+			font-weight: $fontReg;
+		}
+		p{
+			font-size: .8em;
+			font-weight: $fontLite;
+		}
+	}
+
+	.fig__group{
+
+		ul{
+			display: grid;
+			grid-template-columns: repeat(4, 1fr);
+			grid-template-rows: repeat(3, 1fr);
+			grid-auto-flow: column;
+			gap: 1em;
+			padding-bottom: 250px;
+			padding-top: 50px;
+		
+			img{
+				width: 186px;
+			}
+			a{
+				color: $textGreyDrk;
+				text-decoration: none;
+			}
+			.info{
+				background-color: #FDF0F0;
+				padding: 10%;
+				text-align: center;
+				border-bottom-right-radius: 10px;
+				border-bottom-left-radius: 10px;
+				
+				h4{
+					font-size: 1em;
+					text-transform: capitalize;
+					color: $secondary-color1;
+					font-weight: $fontReg;
+				}
+				p{
+					font-size: .8em;
+					font-weight: $fontLite
+				}
+			}
+		}
+
+		@include bp-L{
+			ul{
+				grid-template-rows: repeat(2, 1fr);
+				grid-template-columns: repeat(3, 1fr);
+				grid-auto-flow: row;
+
+				img{
+					width: 497px;
+				}
+
+				.info{
+
+					h4{
+						font-size: 1.3em;
+					}
+					p{
+						font-size: 1em;
+					}
+				}
+			}
 		}
 	}
 }
