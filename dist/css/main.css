@@ -1,0 +1,418 @@
+/* 
+==============================================
+CONTENT:	Project Name Here
+AUTHOR:		Your Name Here
+==============================================
+
+TABLE OF CONTENTS:
+
+0. Reset
+1. Main Layout
+2. Content
+
+==============================================
+*/
+/* 0. Reset ================================= */
+/* 
+If you want to add partials, use Sass Modules via @use:
+@use 'variables';
+
+Usage: partial-name.variable/mixin/function-name:
+background: variables.$primary-color;
+*/
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+	display: block;
+}
+
+body {
+	line-height: 1;
+}
+
+ol,
+ul {
+	list-style: none;
+}
+
+blockquote,
+q {
+	quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+	content: "";
+	content: none;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* 0. Breakpoints ==================================== */
+/* 1. Colors ========================================= */
+/* 2. Fonts  ========================================= */
+/* 0. Breakpoints ==================================== */
+/* 1. Colors ========================================= */
+/* 2. Fonts  ========================================= */
+/* 1. Main Layout ================================= */
+* {
+	box-sizing: border-box;
+}
+
+body {
+	background: #ffffff;
+}
+
+.wrapper {
+	padding: 20px 10%;
+}
+
+header {
+	display: flex;
+	justify-content: space-between;
+}
+header .header__head {
+	display: flex;
+	justify-content: space-between;
+	width: 42%;
+}
+header .header__head h1 {
+	font-size: 2rem;
+	text-transform: uppercase;
+}
+header .header__hamburger-menu {
+	width: 15%;
+	display: flex;
+	justify-content: right;
+}
+header .header__hamburger-menu .hide-small {
+	display: none;
+}
+header .header__hamburger-menu .daburger {
+	width: 7em;
+	align-items: center;
+	border-top: none;
+	border-bottom: none;
+	justify-content: center;
+	display: flex;
+	flex-direction: column;
+	margin-left: auto;
+}
+@media screen and (min-width: 1020px) {
+	header .header__hamburger-menu .daburger {
+		display: none;
+	}
+}
+header .header__hamburger-menu .daburger div {
+	padding: 4.2% 0%;
+	margin: 4.2% 0%;
+	width: 75%;
+	position: relative;
+}
+header .header__hamburger-menu .daburger .topbun {
+	margin-top: 13%;
+}
+
+.hero {
+	background-color: #d30000;
+}
+.hero .hero__content {
+	color: #ffffff;
+	font-size: 1.3rem;
+	line-height: 1.3;
+	font-weight: 300;
+	display: flex;
+	flex-direction: column;
+}
+.hero .hero__content h2 {
+	font-size: 2.3rem;
+	font-weight: 500;
+}
+.hero .hero__content a {
+	color: #d30000;
+	background-color: #ffffff;
+	border-radius: 5px;
+	text-decoration: none;
+	text-transform: uppercase;
+	font-size: 0.8rem;
+	padding: 15px 20px;
+	width: -webkit-fit-content;
+	width: -moz-fit-content;
+	width: fit-content;
+	align-self: flex-end;
+}
+.hero .hero__image {
+	margin-bottom: -23px;
+}
+
+.anchorDivs {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	grid-template-rows: repeat(3, 1fr);
+	height: 120vh;
+	row-gap: 1.3em;
+	padding-bottom: 80px;
+}
+.anchorDivs a {
+	color: #ffffff;
+	text-transform: uppercase;
+	text-decoration: none;
+	grid-column: 1/6;
+	border-radius: 10px;
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+	justify-content: center;
+}
+.anchorDivs a p {
+	font-size: 1rem;
+	font-weight: 300;
+}
+.anchorDivs .anchorDivs__webDesign {
+	background-image: url(/dist/img/webDesignBKGD.png);
+	background-size: cover;
+}
+.anchorDivs .anchorDivs__webDesign h3 {
+	font-size: 2rem;
+	align-self: center;
+	padding-bottom: 20px;
+}
+.anchorDivs .anchorDivs__appDesign {
+	background-image: url(/dist/img/appDesignBKGD.png);
+	background-size: cover;
+}
+.anchorDivs .anchorDivs__appDesign h3 {
+	font-size: 2rem;
+	align-self: center;
+	padding-bottom: 20px;
+}
+.anchorDivs .anchorDivs__graphicDesign {
+	background-image: url(/dist/img/graphicDesignBKGD.png);
+	background-size: cover;
+}
+.anchorDivs .anchorDivs__graphicDesign h3 {
+	font-size: 2rem;
+	width: -webkit-min-content;
+	width: min-content;
+	align-self: center;
+	padding-bottom: 20px;
+}
+
+main {
+	grid-area: main;
+	font-family: "Jost", sans-serif;
+}
+main .main_content-cont {
+	display: grid;
+	flex-direction: column;
+	justify-content: space-between;
+	text-align: center;
+	font-size: 1.3rem;
+	font-size: small;
+	line-height: 2;
+	grid-template-columns: repeat(4, 1fr);
+	grid-template-rows: repeat(4, 1fr);
+}
+main .main_content-cont aside {
+	grid-column: 1/5;
+}
+main .main_content-cont h3 {
+	letter-spacing: 0.35em;
+	font-size: 1.3rem;
+	text-transform: uppercase;
+}
+
+footer {
+	background-color: #1d1c1e;
+	color: #dfdfdf;
+	font-family: "Jost", sans-serif;
+	text-transform: capitalize;
+	display: grid;
+}
+footer .footer__cta {
+	background-color: #9d0000;
+	padding: 50px 7%;
+	width: 90%;
+	justify-self: center;
+	margin-top: -200px;
+	border-radius: 15px;
+	text-align: center;
+	font-size: 1.3rem;
+}
+footer .footer__cta h3 {
+	font-size: 25pt;
+	letter-spacing: 0.078em;
+	font-weight: 500;
+}
+footer .footer__cta p {
+	font-weight: 400;
+	line-height: 1.5;
+	padding: 40px 0%;
+}
+footer .footer__cta a {
+	background-color: #ffffff;
+	color: #9d0000;
+	text-decoration: none;
+	font-weight: 300;
+	padding: 10px;
+	border-radius: 5px;
+	text-transform: uppercase;
+	font-size: 1rem;
+}
+footer .footer_header {
+	font-weight: 700;
+	text-transform: uppercase;
+	text-align: center;
+	display: flex;
+	justify-self: center;
+	align-items: center;
+	padding: 20px 0% 0% 0%;
+}
+footer .footer_header img {
+	width: 50px;
+}
+footer .footer_header .footer_header-head {
+	font-size: 20pt;
+	line-height: 26pt;
+	letter-spacing: 250;
+	font-weight: 500;
+	padding: 25px 0% 15px 0%;
+}
+footer .footer_nav {
+	text-align: center;
+	line-height: 26pt;
+	letter-spacing: 250;
+	font-weight: 400;
+	padding: 20px 0%;
+}
+footer .footer_creds {
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	gap: 1em;
+}
+footer .footer_creds .footer_creds-cred {
+	display: flex;
+	flex-direction: column;
+	gap: 0.5em;
+	font-weight: 300;
+	padding: 10px 0%;
+}
+footer .footer_creds .footer_creds-cred .cred_head {
+	font-weight: 700;
+}
+footer .footer_links {
+	display: flex;
+	justify-content: space-between;
+	width: 30%;
+	justify-self: center;
+	padding: 30px 0% 50px 0%;
+}
+/*# sourceMappingURL=main.css.map */
