@@ -465,6 +465,17 @@ footer{
 		}
 	}
 
+	@include bp-L{
+		.main__header{
+			h2{
+				font-size: 2.5rem;
+			}
+			p{
+				font-size: 1.5rem;
+			}
+		}
+	}
+
 	.fig__group{
 
 		ul{
@@ -473,7 +484,6 @@ footer{
 			grid-template-rows: repeat(3, 1fr);
 			grid-auto-flow: column;
 			gap: 1em;
-			padding-bottom: 250px;
 			padding-top: 50px;
 		
 			img{
@@ -526,3 +536,60 @@ footer{
 		}
 	}
 }
+.design__anchors{
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	padding-bottom: 250px;
+	height: 100vh;
+	gap: 2em;
+
+	a{
+		color: $primary-color;
+		text-transform: uppercase;
+		text-decoration: none;
+		border-radius: 50px;
+		grid-column:1/3;
+		display: flex;
+		flex-direction: column;
+		text-align: center;
+		justify-content: center;
+
+		p{
+			font-size: 1rem;
+			font-weight: $fontLite;
+		}
+	}
+
+	.anchorDivs__appDesign{
+		background-image: url(/dist/img/appDesignBKGD.png);
+		background-size: cover;
+
+		h3{
+			font-size: 2rem;
+			align-self: center;
+			padding-bottom: 20px;
+		}
+	}
+	.anchorDivs__graphicDesign{
+		background-image: url(/dist/img/graphicDesignBKGD.png);
+		background-size: cover;
+
+		h3{
+			font-size: 2rem;
+			width: min-content;
+			align-self: center;
+			padding-bottom: 20px;
+		}
+	}
+	@include bp-L{
+		height: 50vh;
+
+		a{
+			grid-column: auto;
+		}
+	}
+}
+
+
+//Contact us page
+

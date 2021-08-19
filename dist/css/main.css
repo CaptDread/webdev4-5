@@ -556,13 +556,20 @@ footer .footer_links {
 	font-size: 0.8em;
 	font-weight: 300;
 }
+@media screen and (min-width: 1020px) {
+	.wd__page .main__header h2 {
+		font-size: 2.5rem;
+	}
+	.wd__page .main__header p {
+		font-size: 1.5rem;
+	}
+}
 .wd__page .fig__group ul {
 	display: grid;
 	grid-template-columns: repeat(4, 1fr);
 	grid-template-rows: repeat(3, 1fr);
 	grid-auto-flow: column;
 	gap: 1em;
-	padding-bottom: 250px;
 	padding-top: 50px;
 }
 .wd__page .fig__group ul img {
@@ -603,6 +610,57 @@ footer .footer_links {
 	}
 	.wd__page .fig__group ul .info p {
 		font-size: 1em;
+	}
+}
+
+.design__anchors {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	padding-bottom: 250px;
+	height: 100vh;
+	gap: 2em;
+}
+.design__anchors a {
+	color: #ffffff;
+	text-transform: uppercase;
+	text-decoration: none;
+	border-radius: 50px;
+	grid-column: 1/3;
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+	justify-content: center;
+}
+.design__anchors a p {
+	font-size: 1rem;
+	font-weight: 300;
+}
+.design__anchors .anchorDivs__appDesign {
+	background-image: url(/dist/img/appDesignBKGD.png);
+	background-size: cover;
+}
+.design__anchors .anchorDivs__appDesign h3 {
+	font-size: 2rem;
+	align-self: center;
+	padding-bottom: 20px;
+}
+.design__anchors .anchorDivs__graphicDesign {
+	background-image: url(/dist/img/graphicDesignBKGD.png);
+	background-size: cover;
+}
+.design__anchors .anchorDivs__graphicDesign h3 {
+	font-size: 2rem;
+	width: -webkit-min-content;
+	width: min-content;
+	align-self: center;
+	padding-bottom: 20px;
+}
+@media screen and (min-width: 1020px) {
+	.design__anchors {
+		height: 50vh;
+	}
+	.design__anchors a {
+		grid-column: auto;
 	}
 }
 /*# sourceMappingURL=main.css.map */
